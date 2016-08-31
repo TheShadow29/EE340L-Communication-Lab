@@ -1,0 +1,35 @@
+Strong interferer 
+	>>even though trying to demodulate different signals, but gets saturated
+
+Memoryless:
+	>>depends only on current input
+
+Second Non-linearity : DC  + second harmonic
+Third : first harmonic + third harmonic
+
+IM: intermodulation components, f1-f2, f1+f2, 
+
+IIP2 : if we interpolate non linear components as we increase the inputs, when the two powers are equal, 
+second order non linear narrow band systems: non linear generates out of bands signals only, if wide band, then (Obvio)
+
+Third order : 
+	in addn to harmonics; 2f1 - f2, 2f1 + f2, 2f2 and so on
+
+IIP3 and OIP3 is used to quantify the non linearity
+
+Qualitatively : second order non linearity, second and dc components, 
+third order, part of the distortion is generated in band, can't be removed
+
+third order for narrow band is particularly important
+
+If we have a strong interferer, amplifier saturates, a3 is usually negative, the overall gain gets compressed, if amplifier saturates, the gain will go down
+
+Receiver is jamming, generate a high power signal
+
+if we increase the fundamental factor by c then second, higher components increase at a much higher rate. 
+
+a strong interference saturates. 
+
+suppose initially square, but then we observe some curves around it, implies strong non linearity, we need to decrease the gain, so as to receive less power
+
+if broadened spectrum, then may need to decrease the power

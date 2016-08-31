@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Aug 24 16:41:36 2016
+# Generated: Wed Aug 31 16:51:45 2016
 ##################################################
 
 if __name__ == '__main__':
@@ -17,6 +17,7 @@ if __name__ == '__main__':
             print "Warning: failed to XInitThreads()"
 
 from gnuradio import eng_notation
+from gnuradio import filter
 from gnuradio import gr
 from gnuradio import wxgui
 from gnuradio.eng_option import eng_option
@@ -86,33 +87,33 @@ class top_block(grc_wxgui.top_block_gui):
         	peak_hold=False,
         )
         self.Add(self.wxgui_fftsink2_0.win)
-        self.rtlsdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + "" )
-        self.rtlsdr_source_0.set_sample_rate(samp_rate)
-        self.rtlsdr_source_0.set_center_freq(1150.002e6 + tuner, 0)
-        self.rtlsdr_source_0.set_freq_corr(0, 0)
-        self.rtlsdr_source_0.set_dc_offset_mode(0, 0)
-        self.rtlsdr_source_0.set_iq_balance_mode(0, 0)
-        self.rtlsdr_source_0.set_gain_mode(False, 0)
-        self.rtlsdr_source_0.set_gain(10, 0)
-        self.rtlsdr_source_0.set_if_gain(20, 0)
-        self.rtlsdr_source_0.set_bb_gain(20, 0)
-        self.rtlsdr_source_0.set_antenna("", 0)
-        self.rtlsdr_source_0.set_bandwidth(0, 0)
+        self.rtlsdr_source_0_0 = osmosdr.source( args="numchan=" + str(1) + " " + "" )
+        self.rtlsdr_source_0_0.set_sample_rate(samp_rate)
+        self.rtlsdr_source_0_0.set_center_freq(1148.752e6 + tuner, 0)
+        self.rtlsdr_source_0_0.set_freq_corr(0, 0)
+        self.rtlsdr_source_0_0.set_dc_offset_mode(0, 0)
+        self.rtlsdr_source_0_0.set_iq_balance_mode(0, 0)
+        self.rtlsdr_source_0_0.set_gain_mode(False, 0)
+        self.rtlsdr_source_0_0.set_gain(10, 0)
+        self.rtlsdr_source_0_0.set_if_gain(20, 0)
+        self.rtlsdr_source_0_0.set_bb_gain(20, 0)
+        self.rtlsdr_source_0_0.set_antenna("", 0)
+        self.rtlsdr_source_0_0.set_bandwidth(0, 0)
           
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.rtlsdr_source_0, 0), (self.wxgui_fftsink2_0, 0))    
+        self.connect((self.rtlsdr_source_0_0, 0), (self.wxgui_fftsink2_0, 0))    
 
     def get_tuner(self):
         return self.tuner
 
     def set_tuner(self, tuner):
         self.tuner = tuner
-        self.rtlsdr_source_0.set_center_freq(1150.002e6 + self.tuner, 0)
         self._tuner_slider.set_value(self.tuner)
         self._tuner_text_box.set_value(self.tuner)
+        self.rtlsdr_source_0_0.set_center_freq(1148.752e6 + self.tuner, 0)
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -120,7 +121,7 @@ class top_block(grc_wxgui.top_block_gui):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.wxgui_fftsink2_0.set_sample_rate(self.samp_rate)
-        self.rtlsdr_source_0.set_sample_rate(self.samp_rate)
+        self.rtlsdr_source_0_0.set_sample_rate(self.samp_rate)
 
 
 def main(top_block_cls=top_block, options=None):
