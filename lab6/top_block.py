@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Aug 31 16:41:50 2016
+# Generated: Wed Sep 14 01:04:04 2016
 ##################################################
 
 if __name__ == '__main__':
@@ -140,9 +140,9 @@ class top_block(grc_wxgui.top_block_gui):
 
     def set_amplitude_input(self, amplitude_input):
         self.amplitude_input = amplitude_input
-        self.analog_sig_source_x_0.set_amplitude(self.amplitude_input)
         self._amplitude_input_slider.set_value(self.amplitude_input)
         self._amplitude_input_text_box.set_value(self.amplitude_input)
+        self.analog_sig_source_x_0.set_amplitude(self.amplitude_input)
 
 
 def main(top_block_cls=top_block, options=None):

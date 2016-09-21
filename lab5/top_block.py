@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Aug 24 17:04:18 2016
+# Generated: Wed Sep 14 00:55:06 2016
 ##################################################
 
 if __name__ == '__main__':
@@ -179,20 +179,20 @@ class top_block(grc_wxgui.top_block_gui):
     def set_sr_fm_pm(self, sr_fm_pm):
         self.sr_fm_pm = sr_fm_pm
         self.analog_sig_source_x_2.set_sampling_freq(self.sr_fm_pm)
-        self.blocks_throttle_0.set_sample_rate(self.sr_fm_pm)
-        self.wxgui_scopesink2_0_0.set_sample_rate(self.sr_fm_pm)
-        self.wxgui_fftsink2_0_0.set_sample_rate(self.sr_fm_pm)
         self.blocks_multiply_const_vxx_0.set_k((self.sr_fm_pm, ))
+        self.blocks_throttle_0.set_sample_rate(self.sr_fm_pm)
         self.low_pass_filter_0.set_taps(firdes.low_pass(1, self.sr_fm_pm, 20e3, 4e3, firdes.WIN_HAMMING, 6.76))
+        self.wxgui_fftsink2_0_0.set_sample_rate(self.sr_fm_pm)
+        self.wxgui_scopesink2_0_0.set_sample_rate(self.sr_fm_pm)
 
     def get_slider(self):
         return self.slider
 
     def set_slider(self, slider):
         self.slider = slider
-        self.analog_phase_modulator_fc_0.set_sensitivity(2*3.14*self.slider)
         self._slider_slider.set_value(self.slider)
         self._slider_text_box.set_value(self.slider)
+        self.analog_phase_modulator_fc_0.set_sensitivity(2*3.14*self.slider)
 
     def get_samp_rate(self):
         return self.samp_rate
