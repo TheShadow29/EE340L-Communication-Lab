@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Aug  3 15:31:23 2016
+# Generated: Tue Sep 13 23:01:50 2016
 ##################################################
 
 if __name__ == '__main__':
@@ -81,10 +81,12 @@ class top_block(grc_wxgui.top_block_gui):
         	peak_hold=False,
         )
         self.notebook_0.GetPage(1).Add(self.wxgui_fftsink2_0.win)
-        self.hilbert_fc_0 = filter.hilbert_fc(650, firdes.WIN_HAMMING, 6.76)
+        self.hilbert_fc_0 = filter.hilbert_fc(6500, firdes.WIN_HAMMING, 6.76)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
+        self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
         self.blocks_conjugate_cc_0 = blocks.conjugate_cc()
+        self.blocks_complex_to_float_0 = blocks.complex_to_float(1)
         self.analog_sig_source_x_2 = analog.sig_source_c(samp_rate, analog.GR_SIN_WAVE, 10000, 1, 0)
         self.analog_sig_source_x_0 = analog.sig_source_f(samp_rate, analog.GR_COS_WAVE, 1000, 1, 0)
 
@@ -93,8 +95,10 @@ class top_block(grc_wxgui.top_block_gui):
         ##################################################
         self.connect((self.analog_sig_source_x_0, 0), (self.hilbert_fc_0, 0))    
         self.connect((self.analog_sig_source_x_2, 0), (self.blocks_conjugate_cc_0, 0))    
+        self.connect((self.blocks_complex_to_float_0, 0), (self.blocks_float_to_complex_0, 0))    
         self.connect((self.blocks_conjugate_cc_0, 0), (self.blocks_multiply_xx_0, 0))    
-        self.connect((self.blocks_multiply_xx_0, 0), (self.blocks_throttle_0, 0))    
+        self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_throttle_0, 0))    
+        self.connect((self.blocks_multiply_xx_0, 0), (self.blocks_complex_to_float_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.wxgui_fftsink2_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.wxgui_scopesink2_0, 0))    
         self.connect((self.hilbert_fc_0, 0), (self.blocks_multiply_xx_0, 1))    
@@ -104,11 +108,11 @@ class top_block(grc_wxgui.top_block_gui):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
+        self.analog_sig_source_x_2.set_sampling_freq(self.samp_rate)
+        self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
         self.wxgui_fftsink2_0.set_sample_rate(self.samp_rate)
         self.wxgui_scopesink2_0.set_sample_rate(self.samp_rate)
-        self.analog_sig_source_x_2.set_sampling_freq(self.samp_rate)
-        self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
 
 
 def main(top_block_cls=top_block, options=None):

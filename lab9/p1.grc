@@ -480,7 +480,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -535,7 +535,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -590,11 +590,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(248, 348)</value>
+      <value>(400, 308)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -641,7 +641,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -688,11 +688,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(504, 420)</value>
+      <value>(512, 532)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -747,7 +747,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(384, 188)</value>
+      <value>(440, 196)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -806,7 +806,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(184, 253)</value>
+      <value>(176, 221)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -931,11 +931,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>2</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(248, 407)</value>
+      <value>(272, 407)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1337,6 +1337,12 @@
   <connection>
     <source_block_id>blocks_throttle_0_0</source_block_id>
     <sink_block_id>blocks_multiply_const_vxx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_throttle_0_0</source_block_id>
+    <sink_block_id>pfb_arb_resampler_xxx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

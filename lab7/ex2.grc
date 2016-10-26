@@ -623,7 +623,7 @@ excess_bw, ntaps)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(672, 24)</value>
+      <value>(712, 57)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -725,7 +725,7 @@ excess_bw, ntaps)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(472, 124)</value>
+      <value>(448, 140)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1086,7 +1086,7 @@ excess_bw, ntaps)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(816, 164)</value>
+      <value>(800, 154)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1153,7 +1153,7 @@ excess_bw, ntaps)</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1120, 111)</value>
+      <value>(1144, 119)</value>
     </param>
     <param>
       <key>_rotation</key>

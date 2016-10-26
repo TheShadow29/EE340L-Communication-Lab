@@ -148,7 +148,7 @@
     </param>
     <param>
       <key>sensitivity</key>
-      <value>samp_rate</value>
+      <value>2*3.142*samp_rate</value>
     </param>
   </block>
   <block>

@@ -148,7 +148,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(672, 186)</value>
+      <value>(656, 202)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -199,7 +199,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(960, 260)</value>
+      <value>(904, 260)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -242,7 +242,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/arktheshadow/ARK-Linux/Programming/CommunicationLab/lab2/FM-Received.bin</value>
+      <value>/home/arktheshadow/ARK-Linux/Programming/CommunicationLab/EE340L-Communication-Lab/lab2/FM-Received.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -297,7 +297,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(896, 376)</value>
+      <value>(816, 389)</value>
     </param>
     <param>
       <key>_rotation</key>
